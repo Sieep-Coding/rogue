@@ -3,7 +3,7 @@
 #include "raymath.h"
 
 Player::Player(float x, float y)
-    : Entity(x, y, 30, 30), isSwinging(false), swordAngle(0.0f), swingSpeed(300.0f), swingProgress(0.0f) {}
+    : Entity(x, y, 30, 30), isSwinging(false), swordAngle(0.0f), swingSpeed(600.0f), swingProgress(0.0f) {}
 
 void Player::Update()
 {
@@ -19,7 +19,6 @@ void Player::Update()
 
     if (IsMouseButtonDown(MOUSE_LEFT_BUTTON) && !isSwinging)
     {
-        // TODO: add sword swing
         isSwinging = true;
         swingProgress = 0.0f;
         swordAngle = atan2f(GetMouseY() - (position.y + height / 2), GetMouseX() - (position.x + width / 2)) * RAD2DEG;
@@ -42,7 +41,7 @@ void Player::Draw()
     if (isSwinging)
     {
         float currentAngle = swordAngle - 90.0f * swingProgress;
-        float swordLength = 40.0f;
+        float swordLength = 45.0f;
 
         Vector2 swordStart =
             {
@@ -54,7 +53,7 @@ void Player::Draw()
                 swordStart.x + cosf(DEG2RAD * currentAngle) * swordLength,
                 swordStart.y + sinf(DEG2RAD * currentAngle) * swordLength};
 
-        DrawLineEx(swordStart, swordEnd, 4.0f, RED);
+        DrawLineEx(swordStart, swordEnd, 4.0f, DARKGRAY);
     }
 }
 
