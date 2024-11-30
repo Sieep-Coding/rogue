@@ -23,7 +23,7 @@ private:
 public:
     Player(float x, float y);
     void Update() override;
-    void Draw() override;
+    void Draw();
 
     bool IsSwinging() const;
     Rectangle GetSwordHitbox() const;

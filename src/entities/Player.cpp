@@ -4,7 +4,7 @@
 Player::Player(float x, float y)
     : Entity(x, y, 40.0f, 40.0f), speed(4.0f), isSwinging(false),
       swordAngle(0.0f), swingStartAngle(0.0f), swingEndAngle(0.0f),
-      swingSpeed(500.0f), swordLength(50.0f), swordHitbox({0, 0, 0, 0}) {}
+      swingSpeed(385.0f), swordLength(75.0f), swordHitbox({0, 0, 0, 0}) {}
 
 void Player::Update() {
     if (IsKeyDown(KEY_W)) position.y -= speed;
