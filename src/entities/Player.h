@@ -18,6 +18,7 @@ private:
     Rectangle swordHitbox;
 
     void UpdateSword();
+    void CalculateSwingAngles();
 
 public:
     Player(float x, float y);
