@@ -1,14 +1,38 @@
 #include "Enemy.h"
+#include "Entity.h"
+#include <cmath>
 
-Enemy::Enemy(float x, float y)
-    : Entity(x, y, 2.0f) {}
+Enemy::Enemy(float x, float y, float width, float height, float speed)
+    : Entity(x, y, width, height), speed(speed), isAlive(true) {}
+
+void Enemy::UpdateAI(const Player &player)
+{
+    if (!isAlive) return;
+    Vector2 playerPos = player.GetPosition();
+    
+}
 
 void Enemy::Update()
 {
     // TODO: Enemy
+    if (!isAlive)
+    {
+        position = {-1000, -1000};
+    }
 }
 
 void Enemy::Draw()
 {
-    DrawCircle((int)x, int(y), 15, RED);
+    if (!isAlive) return;
+    DrawRectangleRec(GetCollisionBox(), RED);
+}
+
+bool Enemy::IsAlive() const
+{
+    return isAlive;
+}
+
+void Enemy::Kill() 
+{
+    isAlive = false;
 }

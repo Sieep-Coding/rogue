@@ -8,17 +8,18 @@
 class Player : public Entity
 {
 private:
-    float swordAngle = 0.0f;
-    bool isSwinging = false;
-    float swingTimer = 0.0f;
+    bool isSwinging;
+    float swordAngle;     
+    float swingSpeed;     
+    float swingProgress; 
 
 public:
     Player(float x, float y);
-    void Update();
-    void Draw();
+    void Update() override;
+    void Draw() override;
 
-    bool IsSwinging() const { return isSwinging; }
-    float GetSwordAngle() const { return swordAngle; }
+    bool IsSwinging() const;
+    float GetSwordAngle() const;
 };
 
 #endif
