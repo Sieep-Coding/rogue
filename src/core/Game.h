@@ -1,8 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "Player.h"
-#include "Entity.h"
+#include "../entities/Player.h"
+#include "../entities/Entity.h"
+#include "../entities/Enemy.h"
 #include <vector>
 #include "raylib.h"
 

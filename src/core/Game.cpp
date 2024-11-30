@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "Enemy.h"
+#include "../entities/Enemy.h"
 
 Game::Game()
     : player(400, 300), currentRoom(1), isRunning(true)
