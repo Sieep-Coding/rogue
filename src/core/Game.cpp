@@ -21,6 +21,7 @@ void Game::Run() {
 }
 
 void Game::Update() {
+    TraceLog(LOG_INFO, "Updating Game. Current Room: %d", currentRoom);
     player.Update();
 
     for (auto& enemy : enemies) {
