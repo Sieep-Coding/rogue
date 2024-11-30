@@ -1,4 +1,3 @@
-- [ ] Add sword
-- [ ] Enemies
-- [ ] Levels
-- [ ] 
+- [x] Add basic sword that is directional based on mousePos
+- [ ] Enemies that chase player
+- [ ] Generated Levels

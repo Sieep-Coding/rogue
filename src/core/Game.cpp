@@ -64,6 +64,5 @@ void Game::GenerateRoom()
     {
         float ex = GetRandomValue(50, 750);
         float ey = GetRandomValue(50, 550);
-        enemies.emplace_back(Enemy(ex, ey));
     }
 }
