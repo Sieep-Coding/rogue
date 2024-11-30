@@ -44,17 +44,15 @@ void Player::Draw()
         float currentAngle = swordAngle - 90.0f * swingProgress;
         float swordLength = 40.0f;
 
-        Vector2 swordStart = 
-        {
-            position.x + width / 2,
-            position.y + height / 2
-        };
+        Vector2 swordStart =
+            {
+                position.x + width / 2,
+                position.y + height / 2};
 
-        Vector2 swordEnd = 
-        {
-            swordStart.x + cosf(DEG2RAD * currentAngle) * swordLength,
-            swordStart.y + sinf(DEG2RAD * currentAngle) * swordLength
-        };
+        Vector2 swordEnd =
+            {
+                swordStart.x + cosf(DEG2RAD * currentAngle) * swordLength,
+                swordStart.y + sinf(DEG2RAD * currentAngle) * swordLength};
 
         DrawLineEx(swordStart, swordEnd, 4.0f, RED);
     }

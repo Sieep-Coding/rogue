@@ -7,7 +7,8 @@ Enemy::Enemy(float x, float y, float width, float height, float speed)
 
 void Enemy::UpdateAI(const Player &player)
 {
-    if (!isAlive) return;
+    if (!isAlive)
+        return;
     Vector2 playerPos = player.GetPosition();
     float dx = playerPos.x - position.x;
     float dy = playerPos.y - position.y;
@@ -18,7 +19,6 @@ void Enemy::UpdateAI(const Player &player)
         position.x += (dx / distance) * speed;
         position.y += (dy / distance) * speed;
     }
-
 }
 
 void Enemy::Update()
@@ -32,7 +32,8 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-    if (!isAlive) return;
+    if (!isAlive)
+        return;
     DrawRectangleRec(GetCollisionBox(), RED);
 }
 
@@ -41,7 +42,7 @@ bool Enemy::IsAlive() const
     return isAlive;
 }
 
-void Enemy::Kill() 
+void Enemy::Kill()
 {
     isAlive = false;
 }

@@ -9,9 +9,9 @@ class Player : public Entity
 {
 private:
     bool isSwinging;
-    float swordAngle;     
-    float swingSpeed;     
-    float swingProgress; 
+    float swordAngle;
+    float swingSpeed;
+    float swingProgress;
 
 public:
     Player(float x, float y);

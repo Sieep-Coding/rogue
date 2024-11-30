@@ -18,7 +18,7 @@ public:
     void Draw() override;
 
     bool IsAlive() const;
-    void Kill(); 
+    void Kill();
 };
 
 #endif
