@@ -23,7 +23,6 @@ void Enemy::UpdateAI(const Player &player)
 
 void Enemy::Update()
 {
-    // TODO: Enemy
     if (!isAlive)
     {
         position = {-1000, -1000};
