@@ -1,6 +1,6 @@
 # Roguelike (Name: TBD)
 
-![Todo List](https://github.com/Sieep-Coding/rouge/blob/main/todo.md)
+[Todo List](https://github.com/Sieep-Coding/rouge/blob/main/todo.md)
 
 A simple unnamed *roguelike* game built using **C++** and **Raylib**. 
 
@@ -10,7 +10,7 @@ The game features a player-controlled blob that moves in a bird's-eye perspectiv
 
 ### Prerequisites
 - **C++ Compiler**: GCC or any modern C++ compiler.
-- **Raylib**: Installed on your system. [Raylib Installation Guide](https://github.com/raysan5/raylib#installation).
+- **Raylib**: Installed on your system. [Raylib Download](https://github.com/raysan5/raylib/releases).
 - **CMake**: To build the project.
 
 ## Controls
