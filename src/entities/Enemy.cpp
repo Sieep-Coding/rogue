@@ -9,7 +9,16 @@ void Enemy::UpdateAI(const Player &player)
 {
     if (!isAlive) return;
     Vector2 playerPos = player.GetPosition();
-    
+    float dx = playerPos.x - position.x;
+    float dy = playerPos.y - position.y;
+    float distance = sqrtf(dx * dx + dy * dy);
+
+    if (distance > 0.0f)
+    {
+        position.x += (dx / distance) * speed;
+        position.y += (dy / distance) * speed;
+    }
+
 }
 
 void Enemy::Update()
