@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Enemy.h"
 
 Game::Game()
     : player(400, 300), currentRoom(1), isRunning(true)
@@ -32,4 +33,26 @@ void Game::Update() {
     }
 }
 
-void 
+void Game::Draw() {
+    BeginDrawing();
+    ClearBackground(WHITE);
+
+    player.Draw();
+
+    for (auto& enemy : enemies) {
+        enemy.Draw();
+    }
+
+    DrawText(TextFormat("Room: %d", currentRoom), 10, 10, 20, DARKPURPLE);
+
+    EndDrawing();
+}
+
+void Game::GenerateRoom() {
+    enemies.clear();
+    for (int i = 0; i < currentRoom + 2; i++) {
+        float ex = GetRandomValue(50, 750);
+        float ey = GetRandomValue(50, 550);
+        enemies.emplace_back(Enemy(ex, ey));
+    }
+}
