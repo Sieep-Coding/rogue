@@ -4,7 +4,8 @@
 #include "Entity.h"
 #include "raylib.h"
 
-class Player : public Entity {
+class Player : public Entity
+{
 public:
     Player(float x, float y);
     void Update();
