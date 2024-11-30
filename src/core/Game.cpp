@@ -14,7 +14,7 @@ Game::~Game() {
 }
 
 void Game::Run() {
-    while (!isRunning && !WindowShouldClose()) {
+    while (isRunning && !WindowShouldClose()) {
         Update();
         Draw();
     }
