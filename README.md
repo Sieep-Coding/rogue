@@ -1,6 +1,8 @@
-# Roguelike
+# Roguelike (Name: TBD)
 
-A simple roguelike game built using **C++** and **Raylib**. 
+![Todo List](https://github.com/Sieep-Coding/rouge/blob/main/todo.md)
+
+A simple unnamed *roguelike* game built using **C++** and **Raylib**. 
 
 The game features a player-controlled blob that moves in a bird's-eye perspective, swings a sword to defeat enemies, and progresses through procedurally generated rooms.
 
@@ -25,5 +27,3 @@ The game features a player-controlled blob that moves in a bird's-eye perspectiv
 - Advanced enemy behaviors and encounters.
 - Improved graphics and sound effects.
 - Handwritten soundtrack by me.
-
-![Todo List](https://github.com/Sieep-Coding/rouge/blob/main/todo.md)
