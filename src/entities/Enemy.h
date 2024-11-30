@@ -4,7 +4,8 @@
 #include "Entity.h"
 #include "raylib.h"
 
-class Enemy : public Entity {
+class Enemy : public Entity
+{
 public:
     Enemy(float x, float y);
     void Update() override;

@@ -9,38 +9,46 @@ Game::Game()
     GenerateRoom();
 }
 
-Game::~Game() {
+Game::~Game()
+{
     CloseWindow();
 }
 
-void Game::Run() {
-    while (isRunning && !WindowShouldClose()) {
+void Game::Run()
+{
+    while (isRunning && !WindowShouldClose())
+    {
         Update();
         Draw();
     }
 }
 
-void Game::Update() {
+void Game::Update()
+{
     TraceLog(LOG_INFO, "Updating Game. Current Room: %d", currentRoom);
     player.Update();
 
-    for (auto& enemy : enemies) {
+    for (auto &enemy : enemies)
+    {
         enemy.Update();
     }
 
-    if (enemies.empty() && (IsKeyPressed(KEY_E) || IsKeyPressed(KEY_RIGHT))) {
+    if (enemies.empty() && (IsKeyPressed(KEY_E) || IsKeyPressed(KEY_RIGHT)))
+    {
         currentRoom++;
         GenerateRoom();
     }
 }
 
-void Game::Draw() {
+void Game::Draw()
+{
     BeginDrawing();
     ClearBackground(WHITE);
 
     player.Draw();
 
-    for (auto& enemy : enemies) {
+    for (auto &enemy : enemies)
+    {
         enemy.Draw();
     }
 
@@ -49,9 +57,11 @@ void Game::Draw() {
     EndDrawing();
 }
 
-void Game::GenerateRoom() {
+void Game::GenerateRoom()
+{
     enemies.clear();
-    for (int i = 0; i < currentRoom + 2; i++) {
+    for (int i = 0; i < currentRoom + 2; i++)
+    {
         float ex = GetRandomValue(50, 750);
         float ey = GetRandomValue(50, 550);
         enemies.emplace_back(Enemy(ex, ey));
