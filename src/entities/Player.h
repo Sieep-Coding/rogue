@@ -11,8 +11,13 @@ private:
     bool isSwinging;
     float speed;
     float swordAngle;
+    float swingStartAngle;
+    float swingEndAngle;
     float swingSpeed;
-    float swingProgress;
+    float swordLength;
+    Rectangle swordHitbox;
+
+    void UpdateSword();
 
 public:
     Player(float x, float y);
@@ -20,6 +25,7 @@ public:
     void Draw() override;
 
     bool IsSwinging() const;
+    Rectangle GetSwordHitbox() const;
     float GetSwordAngle() const;
 };
 
